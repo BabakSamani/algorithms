@@ -30,7 +30,7 @@ class LinkedList(object):
                 current_node = current_node.get_next()
 
         if current_node is None:
-            raise ValueError("Data not in list")
+            raise ValueError("Data is not in the list")
         return current_node
 
     def delete(self, node):
