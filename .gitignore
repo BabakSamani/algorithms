@@ -68,3 +68,6 @@ typings/
 
 # Ignore weather data file
 *.wth
+
+# Ignoring python exe files
+*.pyc

@@ -1,3 +1,4 @@
+#!usr/local/bin
 import json
 from pyproj import Proj, transform
 import shapefile
