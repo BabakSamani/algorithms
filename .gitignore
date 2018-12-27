@@ -2,7 +2,7 @@
 .idea
 /.idea
 ./.idea
-venv
+venv/
 
 # Logs
 logs
