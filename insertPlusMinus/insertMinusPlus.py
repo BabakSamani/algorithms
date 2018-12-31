@@ -14,7 +14,7 @@ def insert_minus_plus(number, array_list):
             inserted_str += str(item) + '+'
         if total == number:
             result = True
-    print inserted_str
+    # print inserted_str
     return result
 
 
