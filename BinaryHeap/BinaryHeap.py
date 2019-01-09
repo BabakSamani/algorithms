@@ -1,10 +1,10 @@
 #!/usr/bin/python
+# Source: https://medium.com/maxkimambo/binary-heap-implementation-in-python-491afec205
 
 class MaxBinaryHeap:
-
     def __init__(self, _leaves):
         if not isinstance(_leaves, list):
-            raise TypeError('Please provide initial list of leaves as a list')
+            raise TypeError('Please enter initial list of leaves')
         self.leaves = _leaves
         # create empty list to store our heap
         self.heap = []
@@ -30,7 +30,7 @@ class MaxBinaryHeap:
         else:
             current_leaf = leaf_to_insert
 
-        print(f"current leaf : {current_leaf}")
+        print(f"Current leaf : {current_leaf}")
 
         # if its the first element we don't need to percolate
         if len(self.heap) == 1:
@@ -43,7 +43,7 @@ class MaxBinaryHeap:
         root_value = self.heap[root_index]
 
         if self.heap[current_leaf] > root_value:
-            print("swapping ...")
+            print("Swapping ...")
 
             # do the swap
             tmp_root = self.heap[root_index]
@@ -52,14 +52,14 @@ class MaxBinaryHeap:
             # current leaf takes index of the root
             current_leaf = root_index
             # swap complete
-            print(f"swapped {current_leaf} to position of {self.heap[root_index]}")
+            print(f"Swapped {current_leaf} to position of {self.heap[root_index]}")
             return self.heapify_up(current_leaf)
 
     def heapify_down(self, leaf_to_insert=0):
         print("Heapifying down ...")
         current_leaf = leaf_to_insert
 
-        print(f"current leaf {current_leaf}")
+        print(f"Current leaf {current_leaf}")
 
         if not current_leaf:
             last_leaf = self.heap.pop()
@@ -68,7 +68,7 @@ class MaxBinaryHeap:
 
         root, leaf_index = self.max_leaf(current_leaf)
 
-        print(f"leaf {root} , leaf index: {leaf_index}")
+        print(f"Leaf {root} , leaf index: {leaf_index}")
         if not root or not leaf_index:
             return
 
@@ -79,7 +79,7 @@ class MaxBinaryHeap:
             self.heap[current_leaf] = self.heap[leaf_index]
             self.heap[leaf_index] = tmp
             # swap complete
-            print(f"swapped {self.heap[leaf_index]} to position of {self.heap[current_leaf]}")
+            print(f"Swapped {self.heap[leaf_index]} to position of {self.heap[current_leaf]}")
 
             # continue percolating at the child level
             return self.heapify_down(leaf_index)
@@ -111,7 +111,7 @@ class MaxBinaryHeap:
 class MinBinaryHeap:
     def __init__(self, _leaves):
         if not isinstance(_leaves, list):
-            raise TypeError('Please provide initial list of leaves as a list')
+            raise TypeError('Please enter initial list of leaves')
         self.leaves = _leaves
         # create empty list to store our heap
         self.heap = []
@@ -137,7 +137,7 @@ class MinBinaryHeap:
         else:
             current_leaf = leaf_to_insert
 
-        print(f"current leaf : {current_leaf}")
+        print(f"Current leaf : {current_leaf}")
 
         # if its the first element we don't need to percolate
         if len(self.heap) == 1:
@@ -150,7 +150,7 @@ class MinBinaryHeap:
         root_value = self.heap[root_index]
 
         if self.heap[current_leaf] < root_value:
-            print("swapping ...")
+            print("Swapping ...")
             # do the swap
             tmp_root = self.heap[root_index]
             self.heap[root_index] = self.heap[current_leaf]
@@ -158,14 +158,14 @@ class MinBinaryHeap:
             # current leaf takes index of the root
             current_leaf = root_index
             # swap complete
-            print(f"swapped {current_leaf} to position of {self.heap[root_index]}")
+            print(f"Swapped {current_leaf} to position of {self.heap[root_index]}")
             return self.heapify_up(current_leaf)
 
     def heapify_down(self, leaf_to_insert=0):
         print("Heapifying down ...")
         current_leaf = leaf_to_insert
 
-        print(f"current leaf {current_leaf}")
+        print(f"Current leaf {current_leaf}")
 
         if not current_leaf:
             last_leaf = self.heap.pop()
@@ -174,7 +174,7 @@ class MinBinaryHeap:
 
         root, leaf_index = self.min_leaf(current_leaf)
 
-        print(f"leaf {root} , leaf index: {leaf_index}")
+        print(f"Leaf {root} , leaf index: {leaf_index}")
         if not root or not leaf_index:
             return
 
@@ -185,7 +185,7 @@ class MinBinaryHeap:
             self.heap[current_leaf] = self.heap[leaf_index]
             self.heap[leaf_index] = tmp
             # swap complete
-            print(f"swapped {self.heap[leaf_index]} to position of {self.heap[current_leaf]}")
+            print(f"Swapped {self.heap[leaf_index]} to position of {self.heap[current_leaf]}")
 
             # continue percolating at the child level
             return self.heapify_down(leaf_index)
