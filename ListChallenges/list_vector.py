@@ -1,3 +1,4 @@
+#!usr/local/bin
 
 
 def compare(a, b):
@@ -9,7 +10,7 @@ def main():
     for index, item in enumerate(made):
         print(index, "->", item)
 
-    nums = [1,2,3,4,5,6,7,8,9]
+    nums = [1, 2, 3, 4, 5, 6, 7, 8, 9]
     print(sum(nums))
 
     toyota = ["Yaris", "Mirai",  "Camry", "Avalon", "Prius", "Corolla"]
@@ -63,11 +64,8 @@ def main():
     print("First inserted number: ", first_num)
     print(stack)
 
-    squares = list(map(lambda x: x**2, range(10)))
+    squares = list(map(lambda x: x ** 2, range(10)))
     print(squares)
-
-
-
 
 
 if __name__ == "__main__":
